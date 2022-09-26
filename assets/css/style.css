@@ -1,0 +1,420 @@
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/background.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+    background-color: #313030;
+}
+.main{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.area_button{
+    padding-top: 20%;
+}
+.input_areatext{
+    margin: 0 1px 0 1px;
+    height: 100px;
+    text-align: center;
+}
+.input{
+    visibility: hidden;
+}
+.warning{
+    color: aliceblue;
+    border: #313030;
+    background-color: #313030;
+    font-size: calc(0.5rem + 0.5vw);
+}
+.button_main{
+    width: 30%;
+    height: 50px;
+    margin: 10px 35% 10px 35%;
+    background-color: aqua;
+    border-radius: 5px;
+    border: none;
+}
+.button_main:hover{
+    background-color: aliceblue;
+}
+.button_main:active{
+    background-color: rgb(126, 134, 141);
+    transition: 0.5ms;
+}
+.word_add{
+    width: 29.5%;
+    height: 60px;
+    text-align: center;
+    font-size: calc(0.5rem + 0.5vw);
+    border-radius: 5px;
+    border: none;
+} 
+.add_button_area{
+    height: 100px;
+    text-align: right;
+    margin-right: 35%;
+}  
+.add_button{
+    width: 100px;
+    height: 30px;
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+}
+.add_button:hover{
+    background-color: #ffffff;
+}
+.add_button:active{
+    background-color: #bdb8b8;
+}
+.game{
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+.hanged{
+    width: 250px;
+    height: 250px;
+    margin: 100px auto 20px auto;
+    border: 1px #666262 solid;
+    background-image: url(../img/state1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;  
+}
+.words{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+}
+#container{
+    width: 100%;
+    height: 60px;
+    display: none;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+}
+.letter{
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    color: black;
+    font-size: 50px;
+    border-bottom: 4px solid;
+}
+.keywords_container{
+    visibility: collapse;
+    display: inline;
+    width: 100%;
+    justify-content: center;
+    padding: 10px;
+}
+.wrongLetter{
+    background: rgb(185, 106, 106);
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    color: black;
+    font-size: 30px;
+}
+.wrong{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+}
+.life{
+    color: #6bc46f;
+    font-size: 20px;
+}
+.text_input{
+    width: 35px;
+    height: 20px;
+    margin-bottom: 10px;
+    color: green;
+    text-align: center;
+}
+.result{
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 40%;
+    height: 350px;
+    justify-items: center;
+    border: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.img_result{
+    width: 100%;
+    height: 70%;
+    text-align: center;
+}
+.word_result{
+    width: 100%;
+    height: 20px;
+    text-align: center;
+}
+.phrase{
+    color: #4d4b4b;
+    font-size: 20px;
+}
+.result_game{
+    margin-top: 15px;
+    width: 150px;
+    height: 50px;
+    background-color: azure;
+    border: none;
+    border-radius: 5px;
+}
+.result_game:hover{
+    background-color: rgb(158, 158, 158);
+}
+.keywords{
+    text-align: center;
+    width: 80%;
+    padding-left: 10%;
+    margin-top: 3px;
+}
+.key{
+    width: 60px;
+    height: 50px;
+    margin: 0.5px;
+    background-color: #666262;
+    color: azure;
+    border: none;
+}
+.game_buttons{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    visibility: collapse;
+    justify-content: center;
+}
+.button{
+    width: 125px;
+    height: 40px;
+    margin: 50px 18% 15px 18%;
+    background-color: rgb(211, 208, 208);
+    font-size: calc(0.5rem + 0.5vw);
+    border: none;
+    border-radius: 10px;
+    color: black;
+}
+.button:hover{
+    background-color: #928e8e;
+}
+.button:active{
+    background-color: rgb(255, 167, 2);
+    transition:all 0.5ms;
+}
+
+@media screen and (max-width:1366px){
+    .hanged{
+        width: 200px;
+        height: 200px;
+        margin: 20px auto 20px auto;
+    }
+    .letter{
+        width: 40px;
+        height: 40px;
+        margin: 2px;
+        color: black;
+        font-size: 40px;
+        border-bottom: 4px solid;
+    }
+    .button{
+        margin: 15px 18% 15px 18%;
+    }
+    .wrongLetter{
+        margin: 2px;
+    }
+    .words{
+        padding: 5px 0 5px 0;
+    }
+    #container{
+        padding: 5px 0 5px 0;
+    }
+}
+@media screen and (max-width:1024px){
+    .area_button{
+        padding-top: 10%;
+    }
+    .hanged{
+        width: 150px;
+        height: 150px;
+        margin: 10px auto 10px auto;
+    }
+    .key{
+        width: 40px;
+        height: 30px;
+    }
+    .wrong{
+        padding: 5px 0 5px 0;
+    }
+    .keywords_container{
+        padding: 0;
+    }
+    .button{
+        width: 85px;
+        height: 30px;
+    }
+    .phrase{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width:960px){
+    .area_button{
+        padding-top: 40%;
+    }
+    .word_add{
+        width: 70%;
+        height: 100px;
+        font-size: 30px;
+    } 
+    .button_main{
+        height: 90px;
+        width: 70%;
+        margin: 10px 15% 10px 15%;
+        font-size: 30px;
+    }
+    .add_button_area{
+        height: 100px;
+        text-align: center;
+        margin:0 auto;
+    }  
+    .add_button{
+        margin-top: 30px;
+        width: 200px;
+        height: 60px;
+        font-size: 30px;
+    }
+    .warning{
+        font-size: 20px;
+    }
+    .hanged{
+        width: 250px;
+        height: 250px;
+        margin: 200px auto 10px auto;
+    }
+    .letter{
+        width: 60px;
+        height: 60px;
+        margin: 2px;
+        font-size: 60px;
+    }
+    .key{
+        width: 60px;
+        height: 70px;
+        font-size: 30px;
+    }
+    .wrong{
+        padding: 5px 0 5px 0;
+    }
+    .keywords_container{
+        padding: 0;
+    }
+    .button{
+        margin-top: 200px;
+        width: 300px;
+        height: 80px;
+        font-size: 18px;
+    }
+    .life{
+        font-size: 30px;
+    }
+    .text_input{
+        font-size: 25px;
+    }
+    .result{
+        width: 70%;
+        height: 350px;
+    }
+}
+@media screen and (max-width:820px){
+    .key{
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+    }
+    .hanged{
+        margin: 50px auto 10px auto;
+    }
+}
+@media screen and (max-width:480px){
+    .area_button{
+        padding-top: 50%;
+    }
+    .word_add{
+        width: 90%;
+        height: 60px;
+        text-align: center;
+        font-size: 20px;
+        border-radius: 5px;
+        border: none;
+    } 
+    .button_main{
+        width: 90%;
+        margin: 10px 5% 10px 5%;
+        font-size: 20px;
+    }
+    .add_button{
+        font-size: 20px;
+    }
+    .hanged{
+        width: 150px;
+        height: 150px;
+        margin: 100px auto 10px auto;
+    }
+    .keywords{
+        width: 100%;
+        padding: 0;
+    }
+    .key{
+        width: 28px;
+        height: 28px;
+        margin: 0 0 5px;
+        font-size: 20px;
+    } 
+    .letter{
+        width: 30px;
+        height: 30px;
+        margin: 2px;
+        font-size: 30px;
+    }
+    .wrongLetter{
+        width: 25px;
+        height: 25px;
+        margin: 2px;
+        font-size: 25px;
+    }
+    .result{
+        width: 90%;
+        height: 250px;
+    }
+    .phrase{
+        font-size: 14px;
+    }
+    .result_game{
+        margin-top: 5px;
+        width: 100px;
+        height: 30px;
+    }
+    .button{
+        width: 125px;
+        height: 40px;
+        margin:50px 5% 0 5%;
+        font-size: 20px;
+    }
+
+}
