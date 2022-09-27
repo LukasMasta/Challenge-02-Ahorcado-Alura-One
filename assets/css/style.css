@@ -196,7 +196,7 @@ body{
 }
 .game_buttons{
     width: 100%;
-    position: absolute;
+    position: relative;
     display: flex;
     visibility: collapse;
     justify-content: center;
@@ -217,6 +217,14 @@ body{
 .button:active{
     background-color: rgb(255, 167, 2);
     transition:all 0.5ms;
+}
+.git-hub{
+    width: 30%;
+    padding-top: 50px;
+    position: relative;
+    bottom: 0;
+    left: 35%;
+    text-align: center;
 }
 
 @media screen and (max-width:1366px){
