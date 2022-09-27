@@ -224,6 +224,7 @@ function empyt(){
     verificationCondition;
     stateAddWord=0;
     newWord.value="";
+    newWordKeyboard=[];
     stop=0;
 }
 
