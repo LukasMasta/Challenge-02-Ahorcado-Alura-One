@@ -72,13 +72,11 @@ function start(keyValue){
     console.log("que esta pasando mijo");
     if(validation (keyValue,option)){
         keyValue=keyValue.toUpperCase();
-        console.log(keyValue);
         if(stateAddWord==1){
         verification (keyValue);
         correctWord(keyValue,verificationCondition);
         loss();
-        life();
-        console.log("ingreso letras");  
+        life(); 
         }
     } 
 }  
@@ -134,7 +132,6 @@ function correctWord(keyValue,verificationCondition){
             if(count==0){
                 createWrongWord(keyValue);
                 gameloss++;
-                console.log(gameloss);
             }     
         }
         resultGame();
@@ -148,10 +145,7 @@ function createWrongWord(key){
     newDiv.textContent=key;
     wrongDiv.appendChild(newDiv);   
 }
-
 function verification (key){
-    console.log(wrongLetters);
-    console.log(key);
     let count;
     for (const elem in wrongLetters){
          if(wrongLetters[elem]==key){
@@ -168,24 +162,18 @@ function verification (key){
     } 
 }
 function loss(){
-    console.log(gameloss);
     if(r <= 8){
-        if(gameloss==r){
-            
+        if(gameloss==r){  
             let img=url[r];
-            console.log(img);
             stick.style.backgroundImage=`url(${img})`;
             r++;
         }
     }
-    resultGame();
-    
+    resultGame(); 
 }
 function life(){
-    console.log(gameloss);
     restLife.value=8-gameloss;
 }
-
 function restart(){
     empyt();
     n=radomWords(word);
@@ -225,16 +213,14 @@ function empyt(){
     stateAddWord=0;
     newWord.value="";
     newWordKeyboard=[];
+    append="";
     stop=0;
 }
-
 function add(){
-    console.log("parte add"+ newWord.value);
     if(newWord.value.length <= 23 && newWord.value.length >= 3){
         option=1;
         if(validation(newWord.value,option)){
             word.push(newWord.value.toUpperCase());
-            console.log(word);
             newWord.value="";
             newWordKeyboard=[];
         }
@@ -246,10 +232,7 @@ function add(){
         alert("Debes escribir una palabra dentro de los parametros establecidos");
     } 
 }
-
-
 function addForKeyboard(key){
-    console.log("key"+key);
     let unicode='⌫';
     if(key==unicode){
         newWordKeyboard.pop(); 
@@ -261,9 +244,6 @@ function addForKeyboard(key){
     newWord.value=append;
 }
 function resultGame(){
-    console.log("errrorrr");
-    console.log(gameloss);
-    console.log(winner);
     if(gameloss==8){
         visibilityResult.style.display="initial";
         visibilityResult.style.backgroundImage="url('./assets/img/lost.png')";
