@@ -23,7 +23,7 @@ const visibilityResult=document.querySelector(".result");
 const resultButton=document.querySelector(".result_game");
 const phrase=document.querySelector(".phrase");
 const word = ["ELECTROENCEFALOGRAFISTA","CAJA","HELADERA","TEMPANO","MUSICA","EXTRACTO","ILUMINACION","AURICULARES","JAZZ","TRANSPARENTE","ESTADISTICAS","ARCHIVO","ELECTRODOMESTICO","BIOLUMINISCENCIA","OVOVIViPARO","IDIOSINCRASIA","ANARANJADA"];
-const url=["'./assets/img/state1.png'","'./assets/img/state2.png'","'./assets/img/state3.png'","'./assets/img/state4.png'","'./assets/img/state5.png'","'./assets/img/state6.png'","'./assets/img/state7.png'","'./assets/img/state8.png'","'./assets/img/state9.png'","'./assets/img/state10.png'","'./assets/img/state11.png'"]
+const url=["'./assets/img/state1.png'","'./assets/img/state2.png'","'./assets/img/state3.png'","'./assets/img/state4.png'","'./assets/img/state5.png'","'./assets/img/state6.png'","'./assets/img/state7.png'","'./assets/img/state8.png'","'./assets/img/state9.png'"]
 let newWordKeyboard=[];
 let append;
 let n;
@@ -169,7 +169,7 @@ function verification (key){
 }
 function loss(){
     console.log(gameloss);
-    if(r <= 10){
+    if(r <= 8){
         if(gameloss==r){
             
             let img=url[r];
@@ -183,7 +183,7 @@ function loss(){
 }
 function life(){
     console.log(gameloss);
-    restLife.value=10-gameloss;
+    restLife.value=8-gameloss;
 }
 
 function restart(){
@@ -193,6 +193,8 @@ function restart(){
     life();
     stateAddWord=1;
     gameloss=0;
+    r=0;
+    loss();
 }
 function exit(){
     visibilityMain.style.display="initial";
@@ -261,7 +263,7 @@ function resultGame(){
     console.log("errrorrr");
     console.log(gameloss);
     console.log(winner);
-    if(gameloss==10){
+    if(gameloss==8){
         visibilityResult.style.display="initial";
         visibilityResult.style.backgroundImage="url('./assets/img/lost.png')";
         phrase.textContent="La palabra correcta era : "+word[n];
