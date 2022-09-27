@@ -69,7 +69,6 @@ document.addEventListener('keydown', (event) => {
   }, false);
 
 function start(keyValue){
-    console.log("que esta pasando mijo");
     if(validation (keyValue,option)){
         keyValue=keyValue.toUpperCase();
         if(stateAddWord==1){
