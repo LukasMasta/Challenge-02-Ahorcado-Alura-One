@@ -22,7 +22,7 @@ const restLife=document.querySelector(".text_input");
 const visibilityResult=document.querySelector(".result");
 const resultButton=document.querySelector(".result_game");
 const phrase=document.querySelector(".phrase");
-const word = ["ELECTROENCEFALOGRAFISTA","CAJA","HELADERA","TEMPANO","MUSICA","EXTRACTO","ILUMINACION","AURICULARES","JAZZ","TRANSPARENTE","ESTADISTICAS","ARCHIVO","ELECTRODOMESTICO","BIOLUMINISCENCIA","OVOVIViPARO","IDIOSINCRASIA","ANARANJADA"];
+const word = ["ELECTROENCEFALOGRAFISTA","CAJA","HELADERA","TEMPANO","MUSICA","EXTRACTO","ILUMINACION","AURICULARES","JAZZ","TRANSPARENTE","ESTADISTICAS","ARCHIVO","ELECTRODOMESTICO","BIOLUMINISCENCIA","OVOVIVIPARO","IDIOSINCRASIA","ANARANJADA","ETIQUETA","CASERO","CILINDRO","TECLADO","ROCK","MOTOCICLETA","ATMOSFERA"];
 const url=["'./assets/img/state1.png'","'./assets/img/state2.png'","'./assets/img/state3.png'","'./assets/img/state4.png'","'./assets/img/state5.png'","'./assets/img/state6.png'","'./assets/img/state7.png'","'./assets/img/state8.png'","'./assets/img/state9.png'"]
 let newWordKeyboard=[];
 let append;
@@ -68,6 +68,33 @@ document.addEventListener('keydown', (event) => {
     start(keyValue);
   }, false);
 
+function add(){
+    if(newWord.value.length <= 23 && newWord.value.length >= 3){
+        option=1;
+        if(validation(newWord.value,option)){
+            word.push(newWord.value.toUpperCase());
+            newWord.value="";
+            newWordKeyboard=[];
+        }
+        else{
+            alert("Solo se permiten letras, No se aceptan acentos,espacios ni caracteres especiales!");
+        }  
+    }
+    else{
+        alert("Debes escribir una palabra dentro de los parametros establecidos");
+    } 
+}
+function addForKeyboard(key){
+    let unicode='⌫';
+    if(key==unicode){
+        newWordKeyboard.pop(); 
+    }
+    else{
+      newWordKeyboard.push(key);
+    }
+    append=newWordKeyboard.join('');
+    newWord.value=append;
+}  
 function start(keyValue){
     if(validation (keyValue,option)){
         keyValue=keyValue.toUpperCase();
@@ -137,7 +164,6 @@ function correctWord(keyValue,verificationCondition){
         count=0;
     }
 }
-
 function createWrongWord(key){
     let newDiv=document.createElement("div");
     newDiv.classList.add("wrongLetter");
@@ -214,33 +240,6 @@ function empyt(){
     newWordKeyboard=[];
     append="";
     stop=0;
-}
-function add(){
-    if(newWord.value.length <= 23 && newWord.value.length >= 3){
-        option=1;
-        if(validation(newWord.value,option)){
-            word.push(newWord.value.toUpperCase());
-            newWord.value="";
-            newWordKeyboard=[];
-        }
-        else{
-            alert("Solo se permiten letras, No se aceptan acentos,espacios ni caracteres especiales!");
-        }  
-    }
-    else{
-        alert("Debes escribir una palabra dentro de los parametros establecidos");
-    } 
-}
-function addForKeyboard(key){
-    let unicode='⌫';
-    if(key==unicode){
-        newWordKeyboard.pop(); 
-    }
-    else{
-      newWordKeyboard.push(key);
-    }
-    append=newWordKeyboard.join('');
-    newWord.value=append;
 }
 function resultGame(){
     if(gameloss==8){
