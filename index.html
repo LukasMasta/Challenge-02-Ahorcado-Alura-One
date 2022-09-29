@@ -6,113 +6,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Ahorcado</title>
+    <title>Juego del Ahorcado</title>
 </head>
 <body>
     <header>
         <img src="assets/img/logo.png" class="logo">
     </header>
- <main>
-    <div class="main">
-        <div class="initial_pag">
-            <div class="area_button">
-                <input class="button_main" id="initial_button" type="button" value="Iniciar Juego">
-                <input class="button_main" id="add_word" type="button" value="Agregar palabra">
-                <div class="input">
-                    <div class="input_areatext">
-                        <section>
-                            <Label class="warning" for="word_add">La palabra debe tener un minimo de 3 y un maximo de 23 letras</Label>
-                        </section>
-                        <section>
-                            <input type="text" class="word_add" data-add="add_words" placeholder="Escribe una palabra" readonly>
-                        </section>
-                    </div>
-                    <div class="add_button_area">
-                        <input class="add_button" type="button" value="Agregar">  
+    <main>
+        <div class="main">
+            <div class="initial_pag">
+                <div class="area_button">
+                    <input class="button_main" id="initial_button" type="button" value="Iniciar Juego">
+                    <input class="button_main" id="add_word" type="button" value="Agregar palabra">
+                    <div class="input">
+                        <div class="input_areatext">
+                            <section>
+                                <Label class="warning" for="word_add">La palabra debe tener un minimo de 3 y un maximo de 23 letras</Label>
+                            </section>
+                            <section>
+                                <input type="text" class="word_add" data-add="add_words" placeholder="Escribe una palabra" readonly>
+                            </section>
+                        </div>
+                        <div class="add_button_area">
+                            <input class="add_button" type="button" value="Agregar">  
+                        </div>
                     </div>
                 </div>
-            </div>
-           
-        </div>
-        
-        <div class="game">
-            <div class="hanged" id="image"></div>
-            <div>
-                <input class="text_input" type="text" readonly> 
-                <section>
-                    <Label for="text_input" class="life">Vidas</Label>
-                </section> 
-            </div>
-
-            <div class="result">
-                <div class="img_result"></div>
-                <section class="word_result"><p class="phrase"></p></section>
-                <button class="result_game">Aceptar</button>
-            </div>
-
-            <div class="words" data-container="new_words"> </div> 
-            <div class="words" data-containerTwo="new_words" id="container"> </div>
-            <div class="wrong" data-wrong="wrong_words"></div>
-           
-        </div>
-        
-        <div class="keywords_container">
-            <section class="keywords">
-                <button class="key" data-key="Q">Q</button>
-                <button class="key" data-key="W">W</button>
-                <button class="key" data-key="E">E</button>
-                <button class="key" data-key="R">R</button>
-                <button class="key" data-key="T">T</button>
-                <button class="key" data-key="Y">Y</button>
-                <button class="key" data-key="U">U</button>
-                <button class="key" data-key="I">I</button>
-                <button class="key" data-key="O">O</button>
-                <button class="key" data-key="P">P</button> 
-                <button class="key" data-key="DEL" value="DEL">&#9003;</button>
-            </section>
-            <section class="keywords">
-                <button class="key" data-key="A">A</button>
-                <button class="key" data-key="S">S</button>
-                <button class="key" data-key="D">D</button>
-                <button class="key" data-key="F">F</button>
-                <button class="key" data-key="G">G</button>
-                <button class="key" data-key="H">H</button>
-                <button class="key" data-key="J">J</button>
-                <button class="key" data-key="K">K</button>
-                <button class="key" data-key="L">L</button>
-                <button class="key" data-key="Ñ">Ñ</button>
-            </section>
-            <section class="keywords">
-                <button class="key" data-key="Z">Z</button>
-                <button class="key" data-key="X">X</button>
-                <button class="key" data-key="C">C</button>
-                <button class="key" data-key="V">V</button>
-                <button class="key" data-key="B">B</button>
-                <button class="key" data-key="N">N</button>
-                <button class="key" data-key="M">M</button>
-            </section>
             
-        </div>
+            </div>
+            
+            <div class="game">
+                <div class="hanged" id="image"></div>
 
-        <section class="game_buttons">
-            <input class="button" id="restart_game" type="button" value="Restart">
-            <input class="button" id="exit_game" type="button" value="Exit">
-       </section> 
-     
-    </div>
- </main>
- <footer>
-    <div class="git-hub">
-        <section class="link_github">
-            <a href="https://github.com/LukasMasta"><img class="logo_github" src="assets/img/GitHub-Mark-32px.png" rel="Logo github"></a>
-        </section>
-        <section class="copyright">
-            <p>&copy;LucasMasta 2022</p>
-        </section> 
-    </div>
-       
-</footer> 
+                <div>
+                    <input class="text_input" type="text" readonly> 
+                    <section>
+                        <Label for="text_input" class="life">Vidas</Label>
+                    </section> 
+                </div>
+                <div class="result">
+                    <div class="img_result"></div>
+                    <section class="word_result"><p class="phrase"></p></section>
+                    <button class="result_game">Aceptar</button>
+                </div>
+                <div class="words" data-container="new_words"> </div> 
+                <div class="words" data-containerTwo="new_words" id="container"> </div>
+                <div class="wrong" data-wrong="wrong_words"></div>
+            
+            </div>
+            
+            <div class="keywords_container">
+                <section class="keywords">
+                    <button class="key" data-key="Q">Q</button>
+                    <button class="key" data-key="W">W</button>
+                    <button class="key" data-key="E">E</button>
+                    <button class="key" data-key="R">R</button>
+                    <button class="key" data-key="T">T</button>
+                    <button class="key" data-key="Y">Y</button>
+                    <button class="key" data-key="U">U</button>
+                    <button class="key" data-key="I">I</button>
+                    <button class="key" data-key="O">O</button>
+                    <button class="key" data-key="P">P</button> 
+                    <button class="key" data-key="DEL" value="DEL">&#9003;</button>
+                </section>
+                <section class="keywords">
+                    <button class="key" data-key="A">A</button>
+                    <button class="key" data-key="S">S</button>
+                    <button class="key" data-key="D">D</button>
+                    <button class="key" data-key="F">F</button>
+                    <button class="key" data-key="G">G</button>
+                    <button class="key" data-key="H">H</button>
+                    <button class="key" data-key="J">J</button>
+                    <button class="key" data-key="K">K</button>
+                    <button class="key" data-key="L">L</button>
+                    <button class="key" data-key="Ñ">Ñ</button>
+                </section>
+                <section class="keywords">
+                    <button class="key" data-key="Z">Z</button>
+                    <button class="key" data-key="X">X</button>
+                    <button class="key" data-key="C">C</button>
+                    <button class="key" data-key="V">V</button>
+                    <button class="key" data-key="B">B</button>
+                    <button class="key" data-key="N">N</button>
+                    <button class="key" data-key="M">M</button>
+                </section>
+                
+            </div>
+
+            <section class="game_buttons">
+                <input class="button" id="restart_game" type="button" value="Restart">
+                <input class="button" id="exit_game" type="button" value="Exit">
+            </section> 
+        
+        </div>
+    </main>
+    <footer>
+        <div class="git-hub">
+            <section class="link_github">
+                <a href="https://github.com/LukasMasta"><img class="logo_github" src="assets/img/GitHub-Mark-32px.png" rel="Logo github"></a>
+            </section>
+            <section class="copyright">
+                <p>&copy;LucasMasta 2022</p>
+            </section> 
+        </div>
+    </footer> 
 </body>
+
 <script type="module" src="assets/js/validation.js"></script>
 <script type="module" src="assets/js/script.js"></script>
+
 </html>
